@@ -5,8 +5,6 @@ This repository contains a PyTorch-based implementation for predicting the NIFTY
 - Multivariate LSTM: Uses multiple features (technical indicators of 20 stocks).
 - Univariate LSTM: Uses only past values of NIFTY50 for prediction.
 
-<pre lang="text"> <details> <summary><strong> Project Structure</strong></summary> ```plaintext INDEX TRACKING/ ├── nifty50_lstm_data/ # Raw stock/index CSV files ├── processed_data/ │ └── final_multivariate/ # Final model, plots, and scaler │ ├── best_lstm_model.pth │ ├── nifty_scaler.save │ ├── nifty50_prediction_plot.png │ ├── nifty50_real_vs_predicted.png │ └── training_loss_curve.png ├── data_collection.py # Collects NIFTY50 + stock data ├── fix_nifty50_csv.py # Cleans index CSV formatting ├── preprocessing.py # Adds indicators, splits into train/test ├── lstm_model.py # Univariate LSTM model training ├── evaluate_model.py # Univariate model evaluation ├── multivariate_lstm.py # Final multivariate model training └── evaluate_multivariate_lstm.py # Evaluation of multivariate LSTM ``` </details> </pre>
-
 ---
 
 ### Input
