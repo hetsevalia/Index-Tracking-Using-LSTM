@@ -1,7 +1,0 @@
-# pycache files
-__pycache__/
-
-# old multivariate trials
-processed_data/multivariate/
-evaluate_multivariate.py
-train_multivariate_lstm.py
