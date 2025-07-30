@@ -16,10 +16,10 @@ INDEX TRACKING/
 │ │ ├── nifty50_prediction_plot.png
 │ │ ├── nifty50_real_vs_predicted.png
 │ │ └── training_loss_curve.png
-│ ├── multivariate/ # Old multivariate training runs
+│ └── multivariate/ # Old multivariate training runs
 │ ├── loss_curve.png
-│ ├── prediction_plot.png
 │ ├── model.pth
+│ ├── prediction_plot.png
 │ ├── train.csv
 │ └── test.csv
 ├── .gitignore
@@ -27,9 +27,9 @@ INDEX TRACKING/
 ├── data_collection.py # Collects and saves stock data
 ├── fix_nifty50_csv.py # Cleans NIFTY50 CSV for consistency
 ├── preprocessing.py # Generates train/test CSV with indicators
-├── lstm_model.py # Univariate LSTM model training
+├── lstm_model.py # Univariate LSTM model training (final)
+├── multivariate_lstm.py # Multivariate LSTM training
 ├── evaluate_model.py # Evaluation for univariate model
-├── multivariate_lstm.py # Multivariate LSTM training (final)
 ├── evaluate_multivariate_lstm.py # Evaluation script for multivariate model
 ├── evaluate_multivariate.py # Legacy eval script (can ignore)
 └── train_multivariate_lstm.py # Older multivariate training attempt
@@ -40,8 +40,6 @@ INDEX TRACKING/
 
 - 100 features (20 NIFTY50 stocks × 5 technical indicators: `Adj_Close`, `MA10`, `MA30`, `RSI`, `MACD`)
 - Target: NIFTY50 index value
-
-#---
 
 ## Project Workflow
 
@@ -97,10 +95,10 @@ You can view them here after cloning the repo:
   ![Prediction](processed_data/final_multivariate/nifty50_prediction_plot.png)
 
 - Univariate Training Loss  
-  ![Training Loss](processed_data\loss_curve.png)
+  ![Training Loss](processed_data/loss_curve.png)
 
 - Univariate Final Prediction  
-  ![Prediction](processed_data\prediction_plot.png)
+  ![Prediction](processed_data/prediction_plot.png)
 
 ---
 
