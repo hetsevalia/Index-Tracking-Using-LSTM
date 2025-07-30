@@ -46,7 +46,7 @@ class LSTMModel(nn.Module):
         out = self.fc(out[:, -1, :])
         return out
 
-# 🧠 Only run training if file is executed directly
+#  Only run training if file is executed directly
 if __name__ == "__main__":
     print(f"Using device: {DEVICE}")
     # Load Data 
