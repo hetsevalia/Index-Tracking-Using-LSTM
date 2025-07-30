@@ -8,31 +8,21 @@ This repository contains a PyTorch-based implementation for predicting the NIFTY
 ## Project Structure
 
 INDEX TRACKING/
-├── nifty50_lstm_data/ # Raw data (CSV files per stock)
+├── nifty50_lstm_data/ # Raw stock/index CSV files (one per company)
 ├── processed_data/
-│ ├── final_multivariate/ # Final trained multivariate model files and plots
-│ │ ├── best_lstm_model.pth
-│ │ ├── nifty_scaler.save
-│ │ ├── nifty50_prediction_plot.png
-│ │ ├── nifty50_real_vs_predicted.png
-│ │ └── training_loss_curve.png
-│ └── multivariate/ # Old multivariate training runs
-│ ├── loss_curve.png
-│ ├── model.pth
-│ ├── prediction_plot.png
-│ ├── train.csv
-│ └── test.csv
-├── .gitignore
-├── README.md
-├── data_collection.py # Collects and saves stock data
-├── fix_nifty50_csv.py # Cleans NIFTY50 CSV for consistency
-├── preprocessing.py # Generates train/test CSV with indicators
-├── lstm_model.py # Univariate LSTM model training (final)
-├── multivariate_lstm.py # Multivariate LSTM training
-├── evaluate_model.py # Evaluation for univariate model
-├── evaluate_multivariate_lstm.py # Evaluation script for multivariate model
-├── evaluate_multivariate.py # Legacy eval script (can ignore)
-└── train_multivariate_lstm.py # Older multivariate training attempt
+│ └── final_multivariate/ # Final trained multivariate model + plots
+│ ├── best_lstm_model.pth
+│ ├── nifty_scaler.save
+│ ├── nifty50_prediction_plot.png
+│ ├── nifty50_real_vs_predicted.png
+│ └── training_loss_curve.png
+├── data_collection.py # Collects and saves stock/index data
+├── fix_nifty50_csv.py # Cleans NIFTY50 index CSV format
+├── preprocessing.py # Adds technical indicators, creates train/test
+├── lstm_model.py # Univariate LSTM model training script
+├── multivariate_lstm.py # Final multivariate LSTM model training
+├── evaluate_model.py # Evaluation script for univariate LSTM
+└── evaluate_multivariate_lstm.py # Evaluation for final multivariate LSTM
 
 ---
 
